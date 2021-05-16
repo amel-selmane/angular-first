@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFirst } from './my-first/my-first.component';
+import { AppareilComponent } from './appareil/appareil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFirst
+    MyFirst,
+    AppareilComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    AppareilComponent
+  ]
 })
 export class AppModule { }
