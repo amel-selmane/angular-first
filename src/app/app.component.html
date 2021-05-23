@@ -3,9 +3,9 @@
     <div class="col-xs-12">
       <h2>Mes appareils</h2>
       <ul class="list-group">
-        <app-appareil [appareilName]="appareilOne"></app-appareil>
-        <app-appareil [appareilName]="appareilTwo"></app-appareil>
-        <app-appareil [appareilName]="appareilThree"></app-appareil>
+        <li app-appareil [appareilName]="appareilOne" class="list-group-item"></li>
+        <li app-appareil [appareilName]="appareilTwo" class="list-group-item"></li>
+        <li app-appareil [appareilName]="appareilThree" class="list-group-item"></li>
       </ul>
       <button class="btn btn-success" 
               [disabled]="!isAuth"
