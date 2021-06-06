@@ -3,14 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MyFirst } from './my-first/my-first.component';
-import { AppareilComponent } from './appareil/appareil.component';
+import { PostListComponent } from './post-list/post-list.component';
+import { PostListItemComponent } from './post-list-item/post-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFirst,
-    AppareilComponent
+    PostListComponent,
+    PostListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -18,8 +18,7 @@ import { AppareilComponent } from './appareil/appareil.component';
   ],
   providers: [],
   bootstrap: [
-    AppComponent,
-    AppareilComponent
+    AppComponent
   ]
 })
 export class AppModule { }

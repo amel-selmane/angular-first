@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Post } from '../main';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,19 +7,30 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  isAuth = false;
-
-  appareilOne = "Machine à laver";
-  appareilTwo = "Frigo";
-  appareilThree = "Ordinateur";
-  
   constructor() {
-    setTimeout(() => {
-      this.isAuth = true;
-    }, 3000)
+    const date: Date = new Date();
   }
 
-  onAllumer() {
-    console.log('ON ALLUME TOUT');
-  }
+  @Input() posts: Post[] = [
+    {
+      title: "Mon premier post",
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora voluptas velit explicabo temporibus vero.",
+      loveIts: 0,  
+      createdAt: new Date()
+    },
+    {
+      title: "Mon deuxième post",
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora voluptas velit explicabo temporibus vero.",  
+      loveIts: 0,
+      createdAt: new Date()
+    },
+    {
+      title: "Mon dernier post",
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora voluptas velit explicabo temporibus vero.",  
+      loveIts: 0,  
+      createdAt: new Date()
+    }
+  ]
+
+  
 }

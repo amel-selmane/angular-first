@@ -10,3 +10,11 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+  // CUSTOM TYPE
+export type Post = {
+  title: string;
+  content: string; 
+  loveIts: number;
+  createdAt: Date;
+};

@@ -1,0 +1,17 @@
+li {
+    position: relative;
+
+    .postDate {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+
+    button {
+        margin-right: 10px;
+    
+        &:last-of-type {
+            margin-right: unset;
+        }
+    }
+}
